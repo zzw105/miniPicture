@@ -41,7 +41,7 @@ const up = async () => {
     }
 
     // 条件过滤
-    const typeList = ['png', 'jpg,', 'jpeg']
+    const typeList = ['png', 'jpg,', 'jpeg', 'gif']
     if (!typeList.find((item) => fileData.type.includes(item))) {
       message.error('请选择图片类文件')
       return
@@ -84,7 +84,7 @@ const clean = () => {
 onMounted(() => {
   file.value.type = 'file'
   file.value.name = 'logo'
-  file.value.accept = '.png, .jpg, .jpeg'
+  file.value.accept = '.png, .jpg, .jpeg, .gif'
 })
 </script>
 
